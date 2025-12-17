@@ -140,3 +140,31 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.5), transparent);
 }
+
+/* Hero watermark overlay */
+.hero-watermark {
+  position: relative;
+}
+
+.hero-watermark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/Swtbg_logo.png');
+  background-repeat: no-repeat;
+  background-position: right 45% center;
+  background-size: 120% auto;
+  opacity: 0.18;
+  filter: blur(0.3px) contrast(1.15) brightness(1.05);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .hero-watermark::before {
+    opacity: 0.22;
+    background-size: 80% auto;
+    background-position: right 30% center;
+  }
+}

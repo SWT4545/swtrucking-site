@@ -94,24 +94,14 @@ export default function HomePage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="hero-watermark relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0 bg-grid" />
         <div className="absolute inset-0 noise" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-3xl" />
-        {/* Watermark background */}
-        <div
-          className="absolute inset-0 opacity-[0.12] md:opacity-[0.18]"
-          style={{
-            backgroundImage: 'url(/Swtbg_logo.png)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'calc(100% + 5%) center',
-            backgroundSize: 'auto 100%',
-          }}
-        />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
             {/* Primary Brand Name */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
