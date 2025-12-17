@@ -100,6 +100,16 @@ export default function HomePage() {
         <div className="absolute inset-0 noise" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-3xl" />
+        {/* Watermark background */}
+        <div
+          className="absolute inset-0 opacity-[0.04] md:opacity-[0.06]"
+          style={{
+            backgroundImage: 'url(/Swtbg_logo.png)',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'calc(100% + 15%) center',
+            backgroundSize: 'auto 80%',
+          }}
+        />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
