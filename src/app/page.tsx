@@ -102,12 +102,12 @@ export default function HomePage() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-3xl" />
         {/* Watermark background */}
         <div
-          className="absolute inset-0 opacity-[0.06] md:opacity-[0.09]"
+          className="absolute inset-0 opacity-[0.12] md:opacity-[0.18]"
           style={{
             backgroundImage: 'url(/Swtbg_logo.png)',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'calc(100% + 8%) center',
-            backgroundSize: 'auto 95%',
+            backgroundPosition: 'calc(100% + 5%) center',
+            backgroundSize: 'auto 100%',
           }}
         />
 
