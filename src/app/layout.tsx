@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Smith & Williams Trucking",
   },
   description:
-    "Reliable logistics support with a focus on documentation accuracy, clean communication, and on-time execution. Premier dispatch-ready transportation services.",
+    "Smith & Williams Trucking provides transportation services with dispatch coordination, documentation accuracy, and operational reliability. Premier dispatch-ready logistics support.",
   keywords: [
     "trucking",
     "transportation",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Smith & Williams Trucking",
     title: "Smith & Williams Trucking | Premier Dispatch-Ready Transportation",
     description:
-      "Reliable logistics support with a focus on documentation accuracy, clean communication, and on-time execution.",
+      "Smith & Williams Trucking provides transportation services with dispatch coordination, documentation accuracy, and operational reliability.",
     images: [
       {
         url: "/brand/logo.jpg",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Smith & Williams Trucking | Premier Dispatch-Ready Transportation",
     description:
-      "Reliable logistics support with a focus on documentation accuracy, clean communication, and on-time execution.",
+      "Smith & Williams Trucking provides transportation services with dispatch coordination, documentation accuracy, and operational reliability.",
     images: ["/brand/logo.jpg"],
   },
   robots: {
@@ -107,7 +107,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Navbar />
-        <main className="flex-1 pt-16 md:pt-20">{children}</main>
+        <main className="flex-1 pt-20 md:pt-24">{children}</main>
         <Footer />
       </body>
     </html>

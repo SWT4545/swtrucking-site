@@ -19,19 +19,24 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo + Brand Name */}
+          <Link href="/" className="flex items-center gap-4">
             <Image
               src="/brand/logo.jpg"
               alt="Smith & Williams Trucking"
-              width={40}
-              height={40}
-              className="w-10 h-10 object-contain"
+              width={56}
+              height={56}
+              className="w-12 h-12 md:w-14 md:h-14 object-contain"
             />
-            <span className="hidden sm:block text-lg font-semibold text-white">
-              Smith & Williams
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg md:text-xl font-bold text-white leading-tight">
+                Smith & Williams
+              </span>
+              <span className="text-xs md:text-sm font-medium text-gray-400 tracking-wide">
+                Trucking
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

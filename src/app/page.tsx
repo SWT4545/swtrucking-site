@@ -103,6 +103,18 @@ export default function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
+            {/* Primary Brand Name */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="text-white">Smith & Williams</span>
+              <br />
+              <span className="text-red-600">Trucking</span>
+            </h1>
+
+            {/* Value Proposition */}
+            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-6">
+              Premier Dispatch-Ready Transportation
+            </p>
+
             {/* Badges */}
             <div className="flex flex-wrap gap-2 mb-8">
               <span className="px-3 py-1 text-xs font-medium text-gray-400 bg-white/5 border border-white/10 rounded-full">
@@ -116,15 +128,8 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="gradient-text">Premier Dispatch-Ready</span>
-              <br />
-              <span className="text-white">Transportation</span>
-            </h1>
-
-            {/* Subhead */}
-            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl">
+            {/* Description */}
+            <p className="text-lg text-gray-400 mb-10 max-w-2xl">
               Reliable logistics support with a focus on documentation accuracy,
               clean communication, and on-time execution.
             </p>
