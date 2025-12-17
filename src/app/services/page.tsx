@@ -99,6 +99,38 @@ const processSteps = [
 export default function ServicesPage() {
   return (
     <div className="relative">
+      {/* Truck Image Banner */}
+      <section
+        className="relative h-48 md:h-64 lg:h-72 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/trk_logo.png)',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/65" />
+        {/* Desaturation filter via grayscale mix */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/trk_logo.png)',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(40%)',
+            opacity: 0.4,
+          }}
+        />
+        {/* Minimal heading */}
+        <div className="relative h-full flex items-center justify-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white/90 tracking-wide">
+            Freight Services
+          </h2>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-grid" />
