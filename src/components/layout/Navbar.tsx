@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, LogIn } from "lucide-react";
+import { Menu, X, LogIn, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -52,8 +52,14 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Client Portal Button */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Login Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link href="/staff">
+              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white hover:bg-white/5">
+                <Users className="w-4 h-4 mr-2" />
+                Staff
+              </Button>
+            </Link>
             <Link href="/portal">
               <Button variant="outline" size="sm" className="border-white/10 hover:bg-white/5 text-gray-300">
                 <LogIn className="w-4 h-4 mr-2" />
@@ -91,6 +97,12 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
+                <Link href="/staff" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full text-gray-400 hover:text-white hover:bg-white/5">
+                    <Users className="w-4 h-4 mr-2" />
+                    Staff Login
+                  </Button>
+                </Link>
                 <Link href="/portal" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="outline" className="w-full border-white/10 hover:bg-white/5 text-gray-300">
                     <LogIn className="w-4 h-4 mr-2" />

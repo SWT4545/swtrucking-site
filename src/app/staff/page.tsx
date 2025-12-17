@@ -2,17 +2,16 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Lock, ArrowRight, Mail } from "lucide-react";
+import { Users, ArrowRight, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Client Portal",
+  title: "Staff Login",
   description:
-    "Brokers, shippers, and customers can track load status and access documentation through the Smith & Williams Trucking client portal.",
+    "Smith & Williams Trucking staff portal. Access dispatch management and operations tools.",
 };
 
-export default function PortalPage() {
-  // TODO: Replace this placeholder with actual TMS login integration
-  // The TMS is hosted at a separate domain - configure redirect or embed here
+export default function StaffLoginPage() {
+  // TODO: Replace with actual TMS URL when ready
   const TMS_URL = process.env.NEXT_PUBLIC_TMS_URL || null;
 
   return (
@@ -26,28 +25,28 @@ export default function PortalPage() {
         <Card className="glass border-white/5">
           <CardContent className="p-8 md:p-12 text-center">
             <div className="w-20 h-20 rounded-full bg-red-600/10 flex items-center justify-center mx-auto mb-8">
-              <Lock className="w-10 h-10 text-red-600" />
+              <Users className="w-10 h-10 text-red-600" />
             </div>
 
             <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              Client Portal
+              Staff Login
             </h1>
             <p className="text-sm text-gray-500 mb-6">
-              For brokers, shippers & customers
+              Internal operations access
             </p>
 
             {TMS_URL ? (
               <>
                 <p className="text-gray-400 mb-8">
-                  Track your loads, view documentation, and monitor delivery
-                  status.
+                  Access dispatch management, load tracking, and operations
+                  tools.
                 </p>
                 <a href={TMS_URL} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="lg"
                     className="w-full bg-red-600 hover:bg-red-700 text-white"
                   >
-                    Access Portal
+                    Access TMS
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </a>
@@ -55,13 +54,13 @@ export default function PortalPage() {
             ) : (
               <>
                 <p className="text-gray-400 mb-6">
-                  The client portal is being prepared for brokers, shippers, and
-                  customers to track load status. Contact us for access.
+                  The staff portal is being configured. Contact operations for
+                  access credentials.
                 </p>
 
                 <div className="bg-white/5 rounded-lg p-4 mb-8">
                   <p className="text-sm text-gray-500 mb-2">
-                    For portal access requests:
+                    For access requests:
                   </p>
                   <a
                     href="mailto:dispatch@smithwilliamstrucking.com"
@@ -72,12 +71,12 @@ export default function PortalPage() {
                   </a>
                 </div>
 
-                <Link href="/contact">
+                <Link href="/">
                   <Button
                     variant="outline"
                     className="w-full border-white/10 hover:bg-white/5 text-gray-300"
                   >
-                    Contact Us
+                    Return Home
                   </Button>
                 </Link>
               </>
@@ -86,14 +85,7 @@ export default function PortalPage() {
         </Card>
 
         <p className="text-center text-xs text-gray-600 mt-6">
-          By accessing the portal, you agree to our{" "}
-          <Link href="/terms" className="text-gray-500 hover:text-gray-400">
-            Terms of Service
-          </Link>{" "}
-          and{" "}
-          <Link href="/privacy" className="text-gray-500 hover:text-gray-400">
-            Privacy Policy
-          </Link>
+          Authorized personnel only
         </p>
       </div>
     </div>
