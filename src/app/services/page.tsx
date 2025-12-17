@@ -103,7 +103,7 @@ export default function ServicesPage() {
       <section
         className="relative h-48 md:h-64 lg:h-72 overflow-hidden"
         style={{
-          backgroundImage: 'url(/trk_logo.png)',
+          backgroundImage: 'url(/brand/Trk_logo.png)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -115,7 +115,7 @@ export default function ServicesPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/trk_logo.png)',
+            backgroundImage: 'url(/brand/Trk_logo.png)',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
