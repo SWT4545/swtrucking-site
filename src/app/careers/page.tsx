@@ -17,28 +17,30 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Careers - Join Our Team",
   description:
-    "Join Smith & Williams Trucking. We're hiring experienced CDL drivers. Competitive pay, modern equipment, and a supportive team environment.",
+    "Join Smith & Williams Trucking. We're hiring experienced CDL drivers out of Memphis, TN. Competitive per-mile pay, steady freight, and a supportive team environment.",
   keywords: [
     "CDL driver jobs",
     "trucking careers",
-    "driver jobs Phoenix",
+    "driver jobs Memphis",
     "OTR driver",
-    "trucking jobs Arizona",
+    "trucking jobs Tennessee",
+    "Memphis trucking jobs",
+    "Olive Branch MS",
   ],
 };
 
 const benefits = [
   {
     icon: DollarSign,
-    title: "Competitive Pay",
+    title: "Per-Mile Pay",
     description:
-      "Industry-leading pay rates with percentage or per-mile options. Weekly settlements with direct deposit.",
+      "Straightforward per-mile pay on loaded miles. No confusion—you know exactly what you're earning. Weekly settlements with direct deposit.",
   },
   {
-    icon: Truck,
-    title: "Modern Equipment",
+    icon: Clock,
+    title: "Consistent Freight",
     description:
-      "Well-maintained, late-model trucks with the latest safety features and comfortable cabs.",
+      "Steady contracts out of Memphis mean reliable loads and consistent income every week.",
   },
   {
     icon: Shield,
@@ -53,10 +55,10 @@ const benefits = [
       "We treat our drivers as partners, not numbers. Your input matters here.",
   },
   {
-    icon: Clock,
-    title: "Consistent Miles",
+    icon: Truck,
+    title: "Regional & OTR Lanes",
     description:
-      "Steady freight and efficient dispatching means reliable income every week.",
+      "Running lanes you know with dedicated routes out of the Memphis area.",
   },
   {
     icon: Users,
@@ -79,12 +81,12 @@ const openPositions = [
   {
     title: "OTR Company Driver",
     type: "Full-Time",
-    location: "Phoenix, AZ (Home Base)",
+    location: "Memphis, TN Area (Yard: Olive Branch, MS)",
     description:
-      "Join our team as an OTR driver running nationwide lanes. Competitive percentage pay, consistent miles, and home time.",
+      "Join our team as an OTR driver running dedicated lanes out of Memphis. Competitive per-mile pay on loaded miles, consistent freight, and a supportive team.",
     highlights: [
-      "Percentage pay (25-30%)",
-      "All miles paid",
+      "Competitive per-mile pay",
+      "Loaded miles paid",
       "Fuel card provided",
       "Weekly settlements",
     ],
