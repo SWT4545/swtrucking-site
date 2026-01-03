@@ -145,7 +145,7 @@ export default function ApplyPage() {
             Back to Careers
           </Link>
 
-          <div className="w-20 h-20 mx-auto mb-4 relative">
+          <div className="w-36 h-36 mx-auto mb-6 relative">
             <Image
               src="/brand/logo.jpg"
               alt="Smith & Williams Trucking"
