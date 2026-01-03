@@ -18,6 +18,7 @@ import { Mail, MapPin, CheckCircle, Loader2 } from "lucide-react";
 const topics = [
   { value: "driver-support", label: "Driver Support" },
   { value: "customer-service", label: "Customer Service" },
+  { value: "careers", label: "Careers" },
   { value: "compliance", label: "Compliance" },
   { value: "other", label: "Other" },
 ];
