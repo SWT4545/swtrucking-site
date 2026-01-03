@@ -124,11 +124,7 @@ export default function CareersPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://app.smithwilliamstrucking.com/apply"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="/apply">
                 <Button
                   size="lg"
                   className="bg-red-600 hover:bg-red-700 text-white px-8 glow-red-subtle"
@@ -136,7 +132,7 @@ export default function CareersPage() {
                   Apply Now
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </a>
+              </Link>
               <Link href="/contact">
                 <Button
                   size="lg"
@@ -228,16 +224,12 @@ export default function CareersPage() {
                         </span>
                       </div>
                     </div>
-                    <a
-                      href="https://app.smithwilliamstrucking.com/apply"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link href="/apply">
                       <Button className="bg-red-600 hover:bg-red-700 text-white">
                         Apply Now
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
-                    </a>
+                    </Link>
                   </div>
 
                   <p className="text-gray-400 mb-4">{position.description}</p>
@@ -299,12 +291,7 @@ export default function CareersPage() {
                   The application takes about 5 minutes. Have your CDL, work
                   history, and contact info ready.
                 </p>
-                <a
-                  href="https://app.smithwilliamstrucking.com/apply"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
+                <Link href="/apply" className="block">
                   <Button
                     size="lg"
                     className="w-full bg-red-600 hover:bg-red-700 text-white glow-red-subtle"
@@ -312,7 +299,7 @@ export default function CareersPage() {
                     Start Your Application
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
-                </a>
+                </Link>
                 <p className="text-xs text-gray-500 text-center mt-4">
                   We review all applications within 2-3 business days.
                 </p>
