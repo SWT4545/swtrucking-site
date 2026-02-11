@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Smith & Williams Trucking | Privacy Policy",
   description:
     "Privacy policy for Smith & Williams Trucking. Learn how we collect, use, and protect your information.",
 };

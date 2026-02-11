@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle } from "lucide-react";
+import { COMPANY, SMS_COMPLIANCE } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "SMS Policy",
+  title: "Smith & Williams Trucking | SMS Policy",
   description:
     "SMS messaging policy for Smith & Williams Trucking. Operations-only messaging, opt-in/opt-out procedures, and contact information.",
 };
@@ -103,6 +104,19 @@ export default function SMSPolicyPage() {
 
               <div className="divider-red my-8" />
 
+              {/* SMS Compliance Summary - Required for Telnyx/TCPA */}
+              <div className="bg-white/5 rounded-lg p-6 mb-8 border border-white/10">
+                <h3 className="text-lg font-semibold text-white mb-3">Quick Reference</h3>
+                <ul className="text-gray-400 space-y-2">
+                  <li>{SMS_COMPLIANCE.stop}</li>
+                  <li>{SMS_COMPLIANCE.help}</li>
+                  <li>{SMS_COMPLIANCE.freq}</li>
+                  <li>{SMS_COMPLIANCE.rates}</li>
+                </ul>
+              </div>
+
+              <div className="divider-red my-8" />
+
               <h2 className="text-2xl font-bold text-white mb-4">
                 Opt-Out Instructions
               </h2>
@@ -163,18 +177,18 @@ export default function SMSPolicyPage() {
                 Contact Information
               </h2>
               <p className="text-gray-400 mb-4">
-                <strong className="text-white">Smith & Williams Trucking</strong>
+                <strong className="text-white">{COMPANY.legalName}</strong>
                 <br />
-                7600 N. 15th St. Suite 150
+                {COMPANY.addressLine1}
                 <br />
-                Phoenix, AZ 85020
+                {COMPANY.cityStateZip}
                 <br />
                 Email:{" "}
                 <a
-                  href="mailto:dispatch@smithwilliamstrucking.com"
+                  href={`mailto:${COMPANY.supportEmail}`}
                   className="text-red-500 hover:text-red-400"
                 >
-                  dispatch@smithwilliamstrucking.com
+                  {COMPANY.supportEmail}
                 </a>
               </p>
 

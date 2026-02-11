@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Smith & Williams Trucking | Terms of Service",
   description:
     "Terms of service for Smith & Williams Trucking. Review our terms and conditions for using our services.",
 };
