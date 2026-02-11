@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Step 1 Verification Script for Telnyx Campaign Readiness
+ * Step 1 Verification Script for Telnyx A2P Campaign Readiness
  *
  * Checks that all required pages exist and contain required compliance text.
  * Run: node scripts/verify-step1.mjs
@@ -8,28 +8,31 @@
 
 const BASE_URL = 'https://smithwilliamstrucking.com';
 
-// Required content checks
+// Required content checks - using Telnyx expected URLs
 const REQUIRED_CHECKS = {
   '/': {
     name: 'Homepage',
     requiredText: [
-      'smith', // company name partial
+      'smith',
     ],
   },
-  '/privacy': {
+  '/privacy-policy': {
     name: 'Privacy Policy',
     requiredText: [
       'smith',
       'williams',
       'privacy',
+      'mobile information will not be sold',
     ],
   },
-  '/terms': {
-    name: 'Terms of Service',
+  '/terms-and-conditions': {
+    name: 'Terms & Conditions',
     requiredText: [
       'smith',
       'williams',
       'terms',
+      'stop',
+      'help',
     ],
   },
   '/sms-policy': {
@@ -37,12 +40,12 @@ const REQUIRED_CHECKS = {
     requiredText: [
       'smith',
       'williams',
-      'reply stop',
-      'reply help',
-      'message frequency',
-      '7600',
-      'phoenix',
-      '85020',
+      'stop',
+      'help',
+      'message frequency varies',
+      'mobile information will not be sold',
+      '951-437-5474',
+      'dispatch@smithwilliamstrucking.com',
     ],
   },
 };
@@ -99,7 +102,7 @@ async function checkUrl(path, config) {
 
 async function main() {
   console.log('='.repeat(60));
-  console.log('Step 1 Verification: Telnyx Campaign Readiness');
+  console.log('Telnyx A2P Verification: Legal Pages');
   console.log(`Domain: ${BASE_URL}`);
   console.log('='.repeat(60));
   console.log('');
@@ -120,6 +123,7 @@ async function main() {
   for (const result of results) {
     const status = result.ok ? '✓ PASS' : '✗ FAIL';
     console.log(`${status}  ${result.name} (${result.path})`);
+    console.log(`       HTTP: ${result.status || 'N/A'}`);
 
     if (!result.ok) {
       allPassed = false;
@@ -127,7 +131,7 @@ async function main() {
         console.log(`       Error: ${result.error}`);
       }
       if (result.missingText.length > 0) {
-        console.log(`       Missing text: ${result.missingText.join(', ')}`);
+        console.log(`       Missing: ${result.missingText.join(', ')}`);
       }
     }
   }
@@ -136,11 +140,11 @@ async function main() {
   console.log('='.repeat(60));
 
   if (allPassed) {
-    console.log('RESULT: Step 1 verified OK');
+    console.log('RESULT: All Telnyx A2P requirements verified OK');
     console.log('='.repeat(60));
     process.exit(0);
   } else {
-    console.log('RESULT: Step 1 FAILED - fixes required');
+    console.log('RESULT: FAILED - fixes required');
     console.log('='.repeat(60));
     process.exit(1);
   }
