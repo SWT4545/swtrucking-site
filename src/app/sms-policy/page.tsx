@@ -1,217 +1,48 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle } from "lucide-react";
-import { COMPANY, SMS_COMPLIANCE } from "@/lib/company";
+import LegalPage from "../(legal)/LegalPage";
 
-export const metadata: Metadata = {
-  title: "Smith & Williams Trucking | SMS Policy",
-  description:
-    "SMS messaging policy for Smith & Williams Trucking. Operations-only messaging, opt-in/opt-out procedures, and contact information.",
+export const metadata = {
+  title: "SMS Policy | Smith & Williams Trucking",
+  description: "SMS messaging policy for Smith & Williams Trucking. Operational messaging only, opt-in/opt-out procedures, and contact information.",
 };
 
-export default function SMSPolicyPage() {
+export default function SmsPolicyPage() {
   return (
-    <div className="relative">
-      {/* Hero Section */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grid" />
-        <div className="absolute inset-0 noise" />
+    <LegalPage title="SMS Policy" updatedAt="February 11, 2026">
+      <p>
+        Smith &amp; Williams Trucking uses SMS/text messaging for operational and service-related communications only,
+        such as dispatch coordination, load status updates, pickup/delivery scheduling, document requests, and support.
+        We do not send marketing or promotional text messages.
+      </p>
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 rounded-lg bg-red-600/10 flex items-center justify-center">
-              <MessageCircle className="w-6 h-6 text-red-600" />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white">
-              SMS Policy
-            </h1>
-          </div>
-          <p className="text-gray-400">
-            Last updated: {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-          </p>
-        </div>
-      </section>
+      <h2>Opt-In</h2>
+      <p>
+        You may opt in by (1) providing your mobile number directly to a Smith &amp; Williams Trucking representative for
+        operational communication, or (2) initiating a text message to our business number to begin communication.
+      </p>
 
-      {/* Divider */}
-      <div className="divider-red" />
+      <h2>Message Frequency</h2>
+      <p>Message frequency varies.</p>
 
-      {/* Content */}
-      <section className="py-16 md:py-20 relative">
-        <div className="absolute inset-0 noise" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="glass border-white/5">
-            <CardContent className="p-8 md:p-12 prose prose-invert prose-gray max-w-none">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Operations-Only Messaging
-              </h2>
-              <p className="text-gray-400 mb-6">
-                Smith & Williams Trucking uses SMS (text messaging) exclusively
-                for operational coordination and service-related communications.
-                We do not send marketing, promotional, or advertising messages
-                via SMS.
-              </p>
-              <p className="text-gray-400 mb-8">
-                Text messages from Smith & Williams Trucking may include:
-              </p>
-              <ul className="list-disc list-inside text-gray-400 mb-8 space-y-2">
-                <li>Load status updates and dispatch coordination</li>
-                <li>Delivery confirmations and scheduling notifications</li>
-                <li>Documentation requests and operational alerts</li>
-                <li>Service-related responses to your inquiries</li>
-              </ul>
+      <h2>Opt-Out</h2>
+      <p>
+        Reply <strong>STOP</strong> at any time to unsubscribe. You will receive a confirmation message that you have
+        been unsubscribed. You may reply <strong>START</strong> to re-subscribe.
+      </p>
 
-              <div className="divider-red my-8" />
+      <h2>Help</h2>
+      <p>
+        Reply <strong>HELP</strong> for assistance, call <strong>951-437-5474</strong>, or email{" "}
+        <strong>dispatch@smithwilliamstrucking.com</strong>.
+      </p>
 
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Opt-In Consent
-              </h2>
-              <p className="text-gray-400 mb-6">
-                By providing your mobile phone number to Smith & Williams
-                Trucking and engaging in text message communication with us, you
-                consent to receive operational SMS messages related to our
-                services. Consent may be obtained through:
-              </p>
-              <ul className="list-disc list-inside text-gray-400 mb-8 space-y-2">
-                <li>Initiating a text message conversation with us</li>
-                <li>Providing your phone number for service coordination</li>
-                <li>Agreeing to receive operational updates during onboarding</li>
-              </ul>
+      <h2>Fees</h2>
+      <p>Msg &amp; data rates may apply.</p>
 
-              <div className="divider-red my-8" />
-
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Message Frequency
-              </h2>
-              <p className="text-gray-400 mb-8">
-                Message frequency varies based on operational needs and your
-                engagement with our services. You will only receive messages
-                that are necessary for service coordination and operational
-                communication.
-              </p>
-
-              <div className="divider-red my-8" />
-
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Message and Data Rates
-              </h2>
-              <p className="text-gray-400 mb-8">
-                Message and data rates may apply depending on your mobile
-                carrier and service plan. Smith & Williams Trucking is not
-                responsible for any charges incurred from your mobile carrier
-                for receiving SMS messages.
-              </p>
-
-              <div className="divider-red my-8" />
-
-              {/* SMS Compliance Summary - Required for Telnyx/TCPA */}
-              <div className="bg-white/5 rounded-lg p-6 mb-8 border border-white/10">
-                <h3 className="text-lg font-semibold text-white mb-3">Quick Reference</h3>
-                <ul className="text-gray-400 space-y-2">
-                  <li>{SMS_COMPLIANCE.stop}</li>
-                  <li>{SMS_COMPLIANCE.help}</li>
-                  <li>{SMS_COMPLIANCE.freq}</li>
-                  <li>{SMS_COMPLIANCE.rates}</li>
-                </ul>
-              </div>
-
-              <div className="divider-red my-8" />
-
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Opt-Out Instructions
-              </h2>
-              <p className="text-gray-400 mb-6">
-                You may opt out of receiving SMS messages from Smith & Williams
-                Trucking at any time by:
-              </p>
-              <ul className="list-disc list-inside text-gray-400 mb-6 space-y-2">
-                <li>
-                  Replying <strong className="text-white">STOP</strong> or{" "}
-                  <strong className="text-white">UNSUBSCRIBE</strong> to any
-                  message
-                </li>
-                <li>
-                  Contacting us at{" "}
-                  <a
-                    href="mailto:dispatch@smithwilliamstrucking.com"
-                    className="text-red-500 hover:text-red-400"
-                  >
-                    dispatch@smithwilliamstrucking.com
-                  </a>
-                </li>
-              </ul>
-              <p className="text-gray-400 mb-8">
-                After opting out, you will receive a confirmation message and no
-                further SMS messages will be sent unless you re-initiate contact
-                or provide renewed consent.
-              </p>
-
-              <div className="divider-red my-8" />
-
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Help and Support
-              </h2>
-              <p className="text-gray-400 mb-6">
-                For assistance with SMS messaging or any questions about this
-                policy:
-              </p>
-              <ul className="list-disc list-inside text-gray-400 mb-6 space-y-2">
-                <li>
-                  Reply <strong className="text-white">HELP</strong> to any
-                  message for assistance
-                </li>
-                <li>
-                  Email us at{" "}
-                  <a
-                    href="mailto:dispatch@smithwilliamstrucking.com"
-                    className="text-red-500 hover:text-red-400"
-                  >
-                    dispatch@smithwilliamstrucking.com
-                  </a>
-                </li>
-              </ul>
-
-              <div className="divider-red my-8" />
-
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Contact Information
-              </h2>
-              <p className="text-gray-400 mb-4">
-                <strong className="text-white">{COMPANY.legalName}</strong>
-                <br />
-                {COMPANY.addressLine1}
-                <br />
-                {COMPANY.cityStateZip}
-                <br />
-                Email:{" "}
-                <a
-                  href={`mailto:${COMPANY.supportEmail}`}
-                  className="text-red-500 hover:text-red-400"
-                >
-                  {COMPANY.supportEmail}
-                </a>
-              </p>
-
-              <div className="divider-red my-8" />
-
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Related Policies
-              </h2>
-              <p className="text-gray-400">
-                Please also review our{" "}
-                <Link href="/privacy" className="text-red-500 hover:text-red-400">
-                  Privacy Policy
-                </Link>{" "}
-                and{" "}
-                <Link href="/terms" className="text-red-500 hover:text-red-400">
-                  Terms of Service
-                </Link>{" "}
-                for additional information about how we handle your information.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-    </div>
+      <h2>Privacy</h2>
+      <p>
+        Your mobile information will not be sold or shared with third parties for promotional or marketing purposes.
+        For more details, see our Privacy Policy.
+      </p>
+    </LegalPage>
   );
 }
