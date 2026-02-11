@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function PortalPage() {
-  // TODO: Replace this placeholder with actual TMS login integration
-  // The TMS is hosted at a separate domain - configure redirect or embed here
-  const TMS_URL = process.env.NEXT_PUBLIC_TMS_URL || null;
+  // TMS is hosted at app.smithwilliamstrucking.com
+  const TMS_URL = process.env.NEXT_PUBLIC_TMS_URL || "https://app.smithwilliamstrucking.com";
 
   return (
     <div className="relative min-h-[80vh] flex items-center">
@@ -87,11 +86,11 @@ export default function PortalPage() {
 
         <p className="text-center text-xs text-gray-600 mt-6">
           By accessing the portal, you agree to our{" "}
-          <Link href="/terms" className="text-gray-500 hover:text-gray-400">
-            Terms of Service
+          <Link href="/terms-and-conditions" className="text-gray-500 hover:text-gray-400">
+            Terms &amp; Conditions
           </Link>{" "}
           and{" "}
-          <Link href="/privacy" className="text-gray-500 hover:text-gray-400">
+          <Link href="/privacy-policy" className="text-gray-500 hover:text-gray-400">
             Privacy Policy
           </Link>
         </p>
