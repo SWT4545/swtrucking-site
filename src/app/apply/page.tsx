@@ -8,5 +8,5 @@ import { redirect } from "next/navigation";
  * This redirect ensures the public site always points to the canonical form.
  */
 export default function ApplyRedirect() {
-  redirect("https://swt-tms-taupe.vercel.app/apply");
+  redirect("https://app.smithwilliamstrucking.com/apply");
 }

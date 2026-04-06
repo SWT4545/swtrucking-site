@@ -124,7 +124,7 @@ export default function CareersPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://swt-tms-taupe.vercel.app/apply">
+              <Link href="https://app.smithwilliamstrucking.com/apply">
                 <Button
                   size="lg"
                   className="bg-red-600 hover:bg-red-700 text-white px-8 glow-red-subtle"
@@ -224,7 +224,7 @@ export default function CareersPage() {
                         </span>
                       </div>
                     </div>
-                    <Link href="https://swt-tms-taupe.vercel.app/apply">
+                    <Link href="https://app.smithwilliamstrucking.com/apply">
                       <Button className="bg-red-600 hover:bg-red-700 text-white">
                         Apply Now
                         <ArrowRight className="ml-2 w-4 h-4" />
@@ -291,7 +291,7 @@ export default function CareersPage() {
                   The application takes about 5 minutes. Have your CDL, work
                   history, and contact info ready.
                 </p>
-                <Link href="https://swt-tms-taupe.vercel.app/apply" className="block">
+                <Link href="https://app.smithwilliamstrucking.com/apply" className="block">
                   <Button
                     size="lg"
                     className="w-full bg-red-600 hover:bg-red-700 text-white glow-red-subtle"
