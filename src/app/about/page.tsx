@@ -184,7 +184,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="text-sm text-gray-500 mb-8">
-                  7600 N. 15th St. Suite 150, Phoenix, AZ 85020
+                  Olive Branch, MS 38654
                 </div>
                 <Link href="/contact">
                   <Button className="bg-red-600 hover:bg-red-700 text-white">

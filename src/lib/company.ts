@@ -6,9 +6,9 @@
 export const COMPANY = {
   legalName: "Smith & Williams Trucking",
   shortName: "S&W Trucking",
-  addressLine1: "7600 N. 15th St, Suite 150",
-  cityStateZip: "Phoenix, AZ 85020",
-  fullAddress: "7600 N. 15th St, Suite 150, Phoenix, AZ 85020",
+  addressLine1: "Olive Branch, MS",
+  cityStateZip: "Olive Branch, MS 38654",
+  fullAddress: "Olive Branch, MS 38654",
   domain: "smithwilliamstrucking.com",
   supportEmail: "dispatch@smithwilliamstrucking.com",
   website: "https://smithwilliamstrucking.com",

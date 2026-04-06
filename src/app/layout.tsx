@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "logistics",
     "dispatch",
     "freight",
-    "Phoenix",
+    "Olive Branch",
     "Arizona",
   ],
   authors: [{ name: "Smith & Williams Trucking" }],
@@ -95,10 +95,10 @@ export default function RootLayout({
               email: "dispatch@smithwilliamstrucking.com",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "7600 N. 15th St. Suite 150",
-                addressLocality: "Phoenix",
-                addressRegion: "AZ",
-                postalCode: "85020",
+                streetAddress: "Olive Branch",
+                addressLocality: "Olive Branch",
+                addressRegion: "MS",
+                postalCode: "38654",
                 addressCountry: "US",
               },
               areaServed: {

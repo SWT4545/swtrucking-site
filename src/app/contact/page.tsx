@@ -147,9 +147,9 @@ export default function ContactPage() {
                       Address
                     </h3>
                     <p className="text-sm text-gray-400">
-                      7600 N. 15th St. Suite 150
+                      Olive Branch, MS 38654
                       <br />
-                      Phoenix, AZ 85020
+                      
                     </p>
                   </div>
                 </div>

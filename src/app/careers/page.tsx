@@ -40,7 +40,7 @@ const benefits = [
     icon: Clock,
     title: "Consistent Freight",
     description:
-      "Steady contracts out of Memphis mean reliable loads and consistent income every week.",
+      "Freight primarily based out of the Memphis corridor. Load availability and earnings may vary based on scheduling and market conditions.",
   },
   {
     icon: Shield,
@@ -64,7 +64,7 @@ const benefits = [
     icon: Users,
     title: "Supportive Team",
     description:
-      "24/7 dispatch support and a team that's always in your corner.",
+      "Responsive dispatch support and a team focused on keeping you moving efficiently.",
   },
 ];
 

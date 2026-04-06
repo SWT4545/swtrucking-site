@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-400">
                 <MapPin className="w-4 h-4 mt-0.5 text-red-600" />
-                <span>7600 N. 15th St. Suite 150<br />Phoenix, AZ 85020</span>
+                <span>Olive Branch, MS 38654<br />Olive Branch, MS 38654</span>
               </div>
             </div>
           </div>
