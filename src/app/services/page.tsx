@@ -10,15 +10,30 @@ import {
   Shield,
   ArrowRight,
   CheckCircle,
+  Zap,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Transportation and logistics services from Smith & Williams Trucking. Dispatch support, documentation management, and operational coordination.",
+    "Transportation and logistics services from Smith & Williams Trucking. Long-haul freight, same-day courier, medical delivery, and expedited local logistics.",
 };
 
 const services = [
+  {
+    icon: Zap,
+    title: "SWT Express — Courier & Expedited Delivery",
+    description:
+      "Same-day courier, medical transport, and expedited local delivery across Dallas-Fort Worth. Chain-of-custody documentation included.",
+    features: [
+      "Same-day and rush delivery",
+      "Medical courier with chain-of-custody",
+      "Final mile and routed delivery",
+      "Dedicated route contracts",
+    ],
+    href: "/services/express",
+    highlight: true,
+  },
   {
     icon: Truck,
     title: "Transportation Services",
@@ -164,30 +179,50 @@ export default function ServicesPage() {
         <div className="absolute inset-0 noise" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="glass border-white/5 hover:border-red-600/20 transition-colors"
-              >
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 rounded-lg bg-red-600/10 flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-red-600" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-white mb-3">
-                    {service.title}
-                  </h2>
-                  <p className="text-gray-400 mb-6">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
-                        <span className="text-sm text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+            {services.map((service, index) => {
+              const card = (
+                <Card
+                  key={index}
+                  className={`glass transition-colors h-full ${
+                    service.highlight
+                      ? 'border-red-600/30 hover:border-red-600/50'
+                      : 'border-white/5 hover:border-red-600/20'
+                  }`}
+                >
+                  <CardContent className="p-8 h-full flex flex-col">
+                    <div className="w-14 h-14 rounded-lg bg-red-600/10 flex items-center justify-center mb-6">
+                      <service.icon className="w-7 h-7 text-red-600" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-white mb-3">
+                      {service.title}
+                    </h2>
+                    <p className="text-gray-400 mb-6">{service.description}</p>
+                    <ul className="space-y-3 flex-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                          <span className="text-sm text-gray-300">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {service.href && (
+                      <div className="mt-6 pt-4 border-t border-white/5">
+                        <span className="text-sm text-red-400 font-medium flex items-center gap-1">
+                          Learn more <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+              return service.href ? (
+                <Link key={index} href={service.href} className="block">
+                  {card}
+                </Link>
+              ) : (
+                <div key={index}>{card}</div>
+              );
+            })}
           </div>
         </div>
       </section>

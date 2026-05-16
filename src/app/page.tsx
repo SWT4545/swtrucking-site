@@ -15,6 +15,7 @@ import {
   ArrowRight,
   CheckCircle,
   MapPin,
+  Zap,
 } from "lucide-react";
 
 const operationalStandards = [
@@ -125,6 +126,9 @@ export default function HomePage() {
               </span>
               <span className="px-3 py-1 text-xs font-medium text-gray-400 bg-white/5 border border-white/10 rounded-full">
                 Dispatch Support
+              </span>
+              <span className="px-3 py-1 text-xs font-semibold text-red-400 bg-red-600/10 border border-red-600/20 rounded-full">
+                SWT Express Courier
               </span>
             </div>
 
@@ -278,6 +282,75 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="divider-red" />
+
+      {/* SWT Express Section */}
+      <section className="py-20 md:py-28 relative bg-[#0c0c0c]">
+        <div className="absolute inset-0 noise" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold text-red-400 bg-red-600/10 border border-red-600/20 rounded-full mb-5">
+                <Zap className="w-3.5 h-3.5" />
+                Introducing SWT Express
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Same-Day Courier & Expedited Delivery
+              </h2>
+              <p className="text-gray-400 mb-4">
+                SWT Express is our courier and expedited delivery division serving
+                the Dallas-Fort Worth Metroplex. From same-day rush deliveries to
+                contracted dedicated routes, we apply the same documentation
+                discipline and operational standards as our long-haul trucking
+                operation.
+              </p>
+              <p className="text-gray-400 mb-8">
+                Medical courier with chain-of-custody protocols. Final mile
+                delivery for businesses. Expedited local transport for time-critical
+                materials. All with proof of delivery and full status tracking.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/services/express">
+                  <Button className="bg-red-600 hover:bg-red-700 text-white">
+                    SWT Express Services
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" className="border-white/10 hover:bg-white/5 text-gray-300">
+                    Book a Delivery
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                { icon: Zap, title: "Same-Day Courier", desc: "Metro DFW pickup and delivery completed the same day." },
+                { icon: Shield, title: "Medical Courier", desc: "Lab specimens, pharmaceuticals, and medical supplies with chain-of-custody documentation." },
+                { icon: MapPin, title: "Final Mile & Routed Delivery", desc: "Last-leg delivery and recurring multi-stop routes for businesses." },
+                { icon: CheckCircle, title: "Full Documentation", desc: "Every delivery generates proof of delivery, driver timestamps, and status records." },
+              ].map((item, index) => (
+                <Card key={index} className="glass border-white/5 hover:border-red-600/20 transition-colors">
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-9 h-9 rounded-lg bg-red-600/10 flex items-center justify-center shrink-0">
+                        <item.icon className="w-4 h-4 text-red-600" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-1 text-sm">{item.title}</h3>
+                        <p className="text-xs text-gray-400">{item.desc}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
